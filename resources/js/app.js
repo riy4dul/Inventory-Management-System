@@ -5,17 +5,18 @@ import VueRouter from 'vue-router'
   
 Vue.use(VueRouter)
    
-const routes = [
-  { path: '/', component: require('./components/ExampleComponent.vue') },
-]
+//router imported
+import {routes} from './routes';
   
 const router = new VueRouter({
-  routes 
+  routes,
+  mode:'history'
 })
   
 const app = new Vue({
-  router
-}).$mount('#app')
+	el: '#app',
+	router
+});
 
 
 
